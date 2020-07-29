@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.get("/", function(req, res){
     res.redirect("/homepage");
 })
-app.use("/homepage", homepage)
+app.use("/homepage", homepage);
 
 app.listen(port, function(){
     console.log("Listening to port: " + port);
