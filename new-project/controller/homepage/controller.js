@@ -20,3 +20,15 @@ module.exports.viewDetail = function(req, res){
         restaurants: restaurants
     })
 }
+
+module.exports.search = function(req, res){
+    var q = req.query.q;
+    var match = db.get("restaurants").value().filter(function(restaurants){
+        return restaurants.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+    });
+    res.render("homepage/views/list", {
+        restaurants: match,
+        question: q
+    });
+
+}
