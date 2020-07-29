@@ -1,16 +1,21 @@
 //express
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 //homepage.routers
 var homepage = require("./routes/homepage/homepage.routes");
 //auth.routers
 var authRounts = require("./routes/auth/auth.route");
+//users.routers
+var userRouters = require("./routes/users/users.routers");
 //server port
 const port = 3000;
 //app set view
 app.set("view engine", "pug");
 app.set("views", "./views");
 app.use(express.static("public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get("/", function(req, res){
@@ -20,6 +25,8 @@ app.get("/", function(req, res){
 app.use("/homepage", homepage);
 //use login
 app.use("/auth", authRounts);
+//use users
+app.use("/users", userRouters);
 app.listen(port, function(){
     console.log("Listening to port: " + port);
 });

@@ -1,0 +1,20 @@
+extends ../layouts/header
+
+block content 
+    h1 This is restaurants list
+    table.table
+        tr
+            th Name
+            th Phone Number
+            th Address
+            th detail
+
+        
+        each restaurant in restaurants
+            tr
+                td= restaurant.name
+                td= restaurant.phone
+                td= restaurant.address
+                td
+                    a(class="btn btn-light", href="/homepage/list/" + restaurant.id) Detail
+            

@@ -1,0 +1,16 @@
+extends ../layouts/header
+
+block content 
+    h1 This is restaurant #{restaurants.name}
+    table.table
+        tr
+            th Name
+            th Phone Number
+            th Address
+            th price
+        tr
+            td= restaurants.name
+            td= restaurants.phone
+            td= restaurants.address
+            td= restaurants.price
+    a(class="btn btn-primary", href="/homepage/list") Back
