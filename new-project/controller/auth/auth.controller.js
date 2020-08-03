@@ -31,5 +31,8 @@ module.exports.postLogin = function(req, res){
         });
         return;
     }
-    res.redirect("/users/index");
+
+    res.render("users/index", {
+        name: user.name
+    });
 }

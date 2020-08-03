@@ -2,9 +2,7 @@
 var db = require("../../db");
 
 module.exports.homepage = function(req, res){
-    res.render("homepage/index", {
-        name: "Tuan"
-    });
+    res.render("homepage/index");
 }
 
 module.exports.list = function(req, res){
