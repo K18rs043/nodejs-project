@@ -8,3 +8,14 @@ module.exports.user = function(req, res){
         name: name
     });
 }
+
+module.exports.create = function(req, res){
+    res.render("users/views/create/user_create");
+}
+
+module.exports.createID = function(req, res){
+    req.body.id = shortid.generate();
+    db.get("users").push(req.body).write();
+    res.redirect("index");
+    
+}

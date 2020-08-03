@@ -9,6 +9,9 @@ block content
     div#login
         h3.text-center.text-white.pt-5 Login form
         div.container
+            if errors
+                each error in errors
+                    .alert.alert-danger= error
             div#login-row.row.justify-content-center.align-items-center
                 div#login-column.col-md-6
                     div#login-box.col-md-12
@@ -17,11 +20,11 @@ block content
                             div.form-group
                                 label.text-info(for='email') Email:
                                 br
-                                input#email.form-control(type='text', name='email')
+                                input#email.form-control(type='text', name='email' value=values ? values.email: "")
                             div.form-group
                                 label.text-info(for='password') Password:
                                 br
-                                input#password.form-control(type='text', name='password')
+                                input#password.form-control(type='text', name='password' value=values ? values.password: "")
                             div.form-group
                                 label.text-info(for='remember-me')
                                     span Remember me
@@ -30,4 +33,5 @@ block content
                                 br
                                 input.btn.btn-info.btn-md(type='submit', name='submit', value='submit')
                             div#register-link.text-right
-                                a.text-info(href='#') Register here
+                                a If you didn't have an account yet. Please 
+                                a.text-info(href='/users/create') register here
