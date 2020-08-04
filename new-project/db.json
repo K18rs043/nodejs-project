@@ -2,17 +2,33 @@
   "users": [
     {
       "email": "anht9161001@gmail.com",
-      "password": "202cb962ac59075b964b07152d234b70",
+      "password1": "202cb962ac59075b964b07152d234b70",
       "name": "グエングエントアン",
       "phone": "+818090639510",
       "id": "FwG48kOji"
     },
     {
       "email": "anht9161001@gmail.com",
-      "password": "202cb962ac59075b964b07152d234b70",
+      "password1": "202cb962ac59075b964b07152d234b70",
       "name": "グエングエントアン",
       "phone": "+818090639510",
       "id": "l5f6ousmb"
+    },
+    {
+      "email": "anht91610@gmail.com",
+      "name": "グエンアントアン",
+      "password1": "202cb962ac59075b964b07152d234b70",
+      "password2": "123",
+      "phone": "8090639510",
+      "id": "jDhY1QtkZ"
+    },
+    {
+      "email": "anht91610@gmail.com",
+      "name": "グエンアントアン",
+      "password1": "202cb962ac59075b964b07152d234b70",
+      "password2": "202cb962ac59075b964b07152d234b70",
+      "phone": "8090639510",
+      "id": "fXMauc7xF"
     }
   ],
   "restaurants": [
@@ -29,6 +45,20 @@
       "phone": "090-8182-2010",
       "price": 2000,
       "id": "2"
+    },
+    {
+      "name": "ベスト",
+      "address": "糟屋郡新宮町夜臼5丁目4番4号ベルヴィ立花B 202号",
+      "phone": "8090639510",
+      "price": 1000,
+      "id": "3"
+    },
+    {
+      "name": "ベスト",
+      "address": "糟屋郡新宮町夜臼5丁目4番4号ベルヴィ立花B 202号",
+      "phone": "8090639510",
+      "price": 1000,
+      "id": "4"
     }
   ]
 }

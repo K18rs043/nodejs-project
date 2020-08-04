@@ -1,0 +1,41 @@
+extends ../../users/layouts/header
+
+block content 
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+    link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
+    // ---- Include the above in your HEAD tag --------
+    div#login
+        h3.text-center.text-white.pt-5 Add
+        div.container
+            if errors
+                each error in errors
+                    .alert.alert-danger= error
+            div#login-row.row.justify-content-center.align-items-center
+                div#login-column.col-md-6
+                    div#login-box.col-md-12
+                        form#login-form.form(method='post')
+                            h3.text-center.text-info Add restaurant
+                            div.form-group
+                                label.text-info(for='name') Name:
+                                br
+                                input#name.form-control(type='text', name='name' value=values ? values.name: "")
+                            div.form-group
+                                label.text-info(for='address') Address:
+                                br
+                                input#address.form-control(type='text', name='address' value=values ? values.address: "")
+                            div.form-group
+                                label.text-info(for='phone') Phone number:
+                                br
+                                input#phone.form-control(type='text', name='phone')
+                            div.form-group
+                                label.text-info(for='price') Price:
+                                br
+                                input#price.form-control(type='number', name='price')                                                            
+                                br
+                            div.form-group
+                                input(type='file')
+                                br
+                                br
+                                input.btn.btn-info.btn-md(type='submit')
+                            div#register-link.text-right

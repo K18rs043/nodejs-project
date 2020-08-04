@@ -1,10 +1,9 @@
 html
     head
         link(link rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
-        link(href="/public/styles/styles.css")
     body
         nav(class="navbar navbar-expand-lg navbar-light bg-light")
-            a(class="navbar-brand", href="/") 
+            a(class="navbar-brand", href="/users/index") 
                 img(src="/images/logo.png", width="30", height="30")
             button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
                 span(class="navbar-toggler-icon")
@@ -12,15 +11,18 @@ html
             div(class="collapse navbar-collapse", id="navbarSupportedContent")
                 ul(class="navbar-nav mr-auto")
                     li(class="nav-item active")
-                    a(class="nav-link", href="/") Home 
+                    a(class="nav-link", href="/users/index") Home |
                         span(class="sr-only") (current)
                     li(class="nav-item")
-                    a(class="nav-link", href="/homepage/list") List 
+                    a(class="nav-link", href="/users/list") List |
                         span(class="sr-only") (current)
                     li(class="nav-item")
-                    a(class="nav-link", href="/auth/login") Login 
+                    a(class="nav-link", href="/users/add") Add a restaurant |
+                        span(class="sr-only") (current)
+                    li(class="nav-item")
+                    a(class="nav-link", href="/users/logout") Logout 
                         span(class="sr-only") (current)            
-                form(class="form-inline my-2 my-lg-0" action="/homepage/search", method="GET") 
+                form(class="form-inline my-2 my-lg-0" action="/users/search", method="GET") 
                     input(class="form-control mr-sm-2", name="q", value=question, type="text", placeholder="Search", aria-label="Search") 
                     button(class="btn btn-outline-success my-2 my-sm-0") Search
         .container
