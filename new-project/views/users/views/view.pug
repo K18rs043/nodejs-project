@@ -1,16 +1,16 @@
 extends ../layouts/header
 
-block content 
+block content
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+
     h1 This is restaurant #{restaurants.name}
-    table.table
-        tr
-            th Name
-            th Phone Number
-            th Address
-            th price
-        tr
-            td= restaurants.name
-            td= restaurants.phone
-            td= restaurants.address
-            td= restaurants.price
+    ul.list-group.list-group-flush
+        li.list-group-item 
+            img(src="/"+restaurants.avatar width="400" height="200")
+        li.list-group-item
+            |Phone number: #{restaurants.phone}
     a(class="btn btn-primary", href="/users/list") Back

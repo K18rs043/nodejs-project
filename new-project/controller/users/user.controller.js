@@ -58,6 +58,12 @@ module.exports.add = function(req, res){
 }
 //Add a restaurant
 module.exports.addRes = function(req, res){
+    req.body.id = shortid.generate();
+    if(!req.file){
+        req.body.avatar = "upload/noimage.png";
+    }else{
+        req.body.avatar = req.file.path.split("\\").slice(1).join("/");
+    }
     db.get("restaurants").push(req.body).write();
     res.redirect("/users/list");
 }

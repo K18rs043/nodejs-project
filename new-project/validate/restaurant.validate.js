@@ -7,7 +7,7 @@ module.exports.validateRestaurant = function(req, res, next){
         errors.push("address is required");
     }
     if(errors.length){
-        res.render("users/views/create/user_create",{
+        res.render("users/views/add",{
             errors: errors,
             values: req.body
         });

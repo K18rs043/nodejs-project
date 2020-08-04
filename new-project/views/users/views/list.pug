@@ -4,6 +4,7 @@ block content
     h1 This is restaurants list
     table.table
         tr
+            th Image
             th Name
             th Phone Number
             th Address
@@ -12,6 +13,8 @@ block content
         
         each restaurant in restaurants
             tr
+                td
+                    img(src= "/" + restaurant.avatar width="50" height="50")
                 td= restaurant.name
                 td= restaurant.phone
                 td= restaurant.address

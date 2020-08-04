@@ -14,7 +14,7 @@ block content
             div#login-row.row.justify-content-center.align-items-center
                 div#login-column.col-md-6
                     div#login-box.col-md-12
-                        form#login-form.form(method='post')
+                        form#login-form.form(action = "/users/add" method='post' enctype="multipart/form-data")
                             h3.text-center.text-info Add restaurant
                             div.form-group
                                 label.text-info(for='name') Name:
@@ -34,7 +34,9 @@ block content
                                 input#price.form-control(type='number', name='price')                                                            
                                 br
                             div.form-group
-                                input(type='file')
+                                label.text-info(for="avatar") Avatar:
+                                br
+                                input(type='file' name="avatar")
                                 br
                                 br
                                 input.btn.btn-info.btn-md(type='submit')
