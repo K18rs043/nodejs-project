@@ -7,10 +7,16 @@ block content
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
 
-    h1 This is restaurant #{restaurants.name}
+    h1 This is restaurant name:
+        br 
+        h2(style="color:red") #{restaurants.name}
     ul.list-group.list-group-flush
         li.list-group-item 
             img(src="/"+restaurants.avatar width="400" height="200")
         li.list-group-item
+            |Address: #{restaurants.address}
+        li.list-group-item
             |Phone number: #{restaurants.phone}
+        li.list-group-item
+            |Price: #{restaurants.price}
     a(class="btn btn-primary", href="/users/list") Back

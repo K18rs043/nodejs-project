@@ -31,5 +31,22 @@
       "id": "fXMauc7xF"
     }
   ],
-  "restaurants": []
+  "restaurants": [
+    {
+      "name": "カレーcoco",
+      "address": "福岡",
+      "phone": "090-9065-9510",
+      "price": "1000",
+      "id": "FuPjtJgGw",
+      "avatar": "upload/571192c61c3bacb09e177bd2f47bf933"
+    },
+    {
+      "name": "ラメン屋",
+      "address": "福岡県東区和白",
+      "phone": "090-0901-1220",
+      "price": "500",
+      "id": "c3w-Z1MPz",
+      "avatar": "upload/be531e536217ab6545d07f965ee8aef9"
+    }
+  ]
 }
